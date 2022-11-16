@@ -21,8 +21,6 @@ function excluir(el) {
     });
 }
 
-
-
 $(document).ready(function () {
     var editor;
 
@@ -34,8 +32,6 @@ $(document).ready(function () {
 
             console.error(error);
         });
-
-
 
     $("#interagir").click(function () {
 
@@ -53,15 +49,11 @@ $(document).ready(function () {
     });
 
     $("#cadastrar").click(function () {
-
-
         var nome = $("[placeholder='Nome']").val();
-        var dia = $("[placeholder='tag']").val();
-        var tag = $("[placeholder='game']").val();
+        var dia = $("[placeholder='Tag']").val();
+        var tag = $("[placeholder='Game']").val();
         var menssagem = editor.getData();
 
-
-        console.log($("[id='editor']").val())
         var html = "<tr>";
         html += "<td></td>";
         html += "<td>" + nome + "</td>";
@@ -71,15 +63,9 @@ $(document).ready(function () {
         html += "<td><a onclick='excluir(this)' href='#'>excluir</a></td>"
         html += "</tr>"
 
-
         $("#tabela").append(html)
-        $("[placeholder='nome']").val("");
-        $("[placeholder='dia']").val("");
-        $("[placeholder='tag']").val("");
+        $("input").val("");
+        editor.setData('');
 
     });
-
-
-
-
 });
