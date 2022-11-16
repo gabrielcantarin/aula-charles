@@ -55,9 +55,9 @@ $(document).ready(function () {
     $("#cadastrar").click(function () {
 
 
-        var nome = $("[placeholder='nome']").val();
-        var dia = $("[placeholder='dia']").val();
-        var tag = $("[placeholder='tag']").val();
+        var nome = $("[placeholder='Nome']").val();
+        var dia = $("[placeholder='tag']").val();
+        var tag = $("[placeholder='game']").val();
         var menssagem = editor.getData();
 
 

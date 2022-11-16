@@ -10,37 +10,76 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
     <script src="assets/css/script.js"></script>
+    <script src="assets/css/style.css"></script>
 
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">Destiny 2 player</a>
+          <button class="btn btn-light"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Atividades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Cadastro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <h1>Cadastro</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <img class="container" src="img2/2.png" id="vanguarda">
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-3"></div>
         <div class="col-5">
-            <h1>destiny 2</h1>
-            <img src="img2/2.png" id="vanguarda" width="100">
             <button type="button" class="btn btn-danger" id="interagir">Interagir</button>
             <table class="table" id="tabela">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">nome</th>
-                    <th scope="col">dia</th>
-                    <th scope="col">tag</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Game</th>
                     <th scope="col">Menssagem</th>
                 </tr>
                 <tr>
                     <td scope="row">1</th>
                     <td>Charles</td>
-                    <td>14</td>
                     <td>selrahccb</td>
+                    <td>xbox</td>
                     <td></td>
                     <td><a onclick="excluir(this)" href="#">excluir</a></td>
                 </tr>
             </table>
             <form>
-                <input type="text" placeholder="nome"></input>
-                <input type="text" placeholder="dia"></input>
-                <input type="text" placeholder="tag"></input>
+                <div class="row g-3">
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="Nome" aria-label="City">
+                    </div>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="tag" aria-label="State">
+                    </div>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" placeholder="game" aria-label="Zip">
+                    </div>
+                  </div>
                 <div id="editor"></div>
                 <button type="button" class="btn btn-danger" id="cadastrar">Cadastrar</button>
             </form>
