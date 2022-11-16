@@ -60,7 +60,7 @@ $(document).ready(function () {
         html += "<td>" + dia + "</td>";
         html += "<td>" + tag + "</Ttd>";
         html += "<td>" + menssagem + "</td>"
-        html += "<td><a onclick='excluir(this)' href='#'>excluir</a></td>"
+        html += "<td><a onclick='excluir(this)' href='#'><i class='fa fa-trash'></a></td>"
         html += "</tr>"
 
         $("#tabela").append(html)
