@@ -24,6 +24,19 @@ function excluir(el) {
 
 
 $(document).ready(function () {
+    var editor;
+
+    ClassicEditor.create(document.querySelector('#editor'))
+        .then(newEditor => {
+            editor = newEditor;
+        })
+        .catch(error => {
+
+            console.error(error);
+        });
+
+
+
     $("#interagir").click(function () {
 
         var imagem1 = $("#vanguarda").is(":visible")
@@ -40,10 +53,12 @@ $(document).ready(function () {
     });
 
     $("#cadastrar").click(function () {
+
+
         var nome = $("[placeholder='nome']").val();
         var dia = $("[placeholder='dia']").val();
         var tag = $("[placeholder='tag']").val();
-        var menssagem = $("[id='editor']").val();
+        var menssagem = editor.getData();
 
 
         console.log($("[id='editor']").val())
@@ -64,13 +79,7 @@ $(document).ready(function () {
 
     });
 
-    ClassicEditor
 
-        .create(document.querySelector('#editor'))
-        .catch(error => {
-            editor.getData();
 
-            console.log(editor);
-            console.error(error);
-        });
+
 });
