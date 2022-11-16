@@ -43,9 +43,10 @@ $(document).ready(function () {
         var nome = $("[placeholder='nome']").val();
         var dia = $("[placeholder='dia']").val();
         var tag = $("[placeholder='tag']").val();
-        var menssagem = $("#editor").val();
-        
-        console.log()
+        var menssagem = $("[id='editor']").val();
+
+
+        console.log($("[id='editor']").val())
         var html = "<tr>";
         html += "<td></td>";
         html += "<td>" + nome + "</td>";
@@ -55,18 +56,20 @@ $(document).ready(function () {
         html += "<td><a onclick='excluir(this)' href='#'>excluir</a></td>"
         html += "</tr>"
 
-        
+
         $("#tabela").append(html)
         $("[placeholder='nome']").val("");
         $("[placeholder='dia']").val("");
         $("[placeholder='tag']").val("");
+
     });
-    
+
     ClassicEditor
-    
+
         .create(document.querySelector('#editor'))
         .catch(error => {
-            editor.getData(menssagem);
+            editor.getData();
+
             console.log(editor);
             console.error(error);
         });
