@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Cadastro no site</title>
+    <title>Atividades</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
     <script src="assets/css/script.js"></script>
+
 
 </head>
 
@@ -59,84 +60,74 @@
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="row text-center">
             <div class="col">
-                <h1>Cadastro</h1>
+                <h1>Nascente</h1>
             </div>
         </div>
-
-        <div class="row justify-content-center">
-            <div class="col-8">
-                <img class="img-fluid rounded m-4" src="img2/2.png" id="vanguarda">
-            </div>
-        </div>
-
-        <div class="row text-center mb-4">
-            <div class="col">
-                <button type="button" class="btn btn-danger" id="interagir">Interagir</button>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-8">
-                <table class="table table table-dark" id="tabela">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Tag</th>
-                        <th scope="col">Game</th>
-                        <th scope="col">Observação</th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td scope="row">1</th>
-                        <td>Charles</td>
-                        <td>selrahccb</td>
-                        <td>xbox</td>
-                        <td></td>
-                        <td><a onclick="excluir(this)" href="#"><i class="fa fa-trash"></i></a></td>
-                    </tr>
-                </table>
-
-            </div>
-        </div>
-
-        <form>
-            <div class="row">
+        <div class="container">
+            <div class="row text-center">
                 <div class="col">
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" placeholder="Nome" id="name">
+                    <h3>Aqui você pode se candidatar para a atividade Nascente</h3>
+                    <img src="img2/nascente.jpg" class="rounded m-4" width="600">
+                </div>        
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <table class="table table table-dark" id="lista">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Tag</th>
+                                <th scope="col">Game</th>
+                                <th scope="col">Hora</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</th>
+                                <td>Charles</td>
+                                <td>selrahccb</td>
+                                <td>xbox</td>
+                                <td></td>
+                                <td><a onclick="excluir(this)" href="#"><i class="fa fa-trash"></i></a></td>
+                            </tr>
+                        </table>
+        
+                    </div>
                 </div>
-
-                <div class="col">
-                    <label for="tag" class="form-label">Tag</label>
-                    <input type="text" class="form-control" placeholder="Tag" id="tag">
-                </div>
-
-                <div class="col">
-                    <label for="game" class="form-label">Game</label>
-                    <input type="text" class="form-control" placeholder="Game" id="game">
-                </div>
+        
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Nome" id="Nome">
+                        </div>
+        
+                        <div class="col">
+                            <label for="tag" class="form-label">Tag</label>
+                            <input type="text" class="form-control" placeholder="Tag" id="Tag">
+                        </div>
+        
+                        <div class="col">
+                            <label for="game" class="form-label">Game</label>
+                            <input type="text" class="form-control" placeholder="Game" id="Game">
+                        </div>
+                        
+                        <div class="col">
+                            <label class="form-label">Hora</label>
+                            <input type="text" class="form-control" placeholder="Hora" id="Hora">
+                        </div>
+                    </div>        
+                    
+                    <div class="row text-center mb-4 mt-4">
+                        <div class="col">
+                            <button type="button" class="btn btn-danger" id="cadastro">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+                    <h4>Apos ter finalizado a atividade favor excluir seu nome da lista!</h4>
+                    <h6>Estamos trabalhando para melhorar o sistema para que isso nao volte a ser necessario!</h6>
             </div>
-
-            <div class="row mt-3 mb-3">
-                <div class="col">
-                    <label class="form-label">Observação</label>
-                    <div id="editor"></div>
-                </div>
-            </div>
-
-            <div class="row text-center mb-4">
-                <div class="col">
-                    <button type="button" class="btn btn-danger" id="cadastrar">Cadastrar</button>
-                </div>
-            </div>
-        </form>
-
-    </div>
-
 
 </body>
 
