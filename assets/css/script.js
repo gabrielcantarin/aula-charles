@@ -72,6 +72,7 @@ $(document).ready(function () {
     $("#cadastro").click(function () {       
         var nome2 = $("#Nome").val();
         var tag2 = $("#Tag").val();
+        var classe = $("#Classe").val();
         var game2 = $("#Game").val();
         var hora2 = $("#Hora").val();
 
@@ -79,6 +80,7 @@ $(document).ready(function () {
         html2 += "<td></td>";
         html2 += "<td>" + nome2 + "</td>";
         html2 += "<td>" + tag2 + "</td>";
+        html2 += "<td>" + classe + "</td>";
         html2 += "<td>" + game2 + "</Ttd>";
         html2 += "<td>" + hora2 + "</td>"
         html2 += "<td><a onclick='excluir(this)' href='#'><i class='fa fa-trash'></a></td>"
