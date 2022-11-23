@@ -1,4 +1,3 @@
-
 function excluir(el) {
 
     swal({
@@ -21,54 +20,8 @@ function excluir(el) {
     });
 }
 
-$(document).ready(function () {
-    var editor;
-
-    ClassicEditor.create(document.querySelector('#editor'))
-        .then(newEditor => {
-            editor = newEditor;
-        })
-        .catch(error => {
-
-            console.error(error);
-        });
-
-    $("#interagir").click(function () {
-
-        var imagem1 = $("#vanguarda").is(":visible")
-
-        if (imagem1 == true) {
-
-            $("#vanguarda").hide()
-
-        } else {
-
-            $("#vanguarda").show()
-
-        }
-    });
-    //cadasto no site
-    $("#cadastrar").click(function () {
-        var nome = $("[placeholder='Nome']").val();
-        var dia = $("[placeholder='Tag']").val();
-        var tag = $("[placeholder='Game']").val();
-        var menssagem = editor.getData();
-
-        var html = "<tr>";
-        html += "<td></td>";
-        html += "<td>" + nome + "</td>";
-        html += "<td>" + dia + "</td>";
-        html += "<td>" + tag + "</Ttd>";
-        html += "<td>" + menssagem + "</td>"
-        html += "<td><a onclick='excluir(this)' href='#'><i class='fa fa-trash'></a></td>"
-        html += "</tr>"
-
-        $("#tabela").append(html)
-        $("input").val("");
-        editor.setData('');
-
-    });
-    //nascente
+$(document).ready(function(){
+    
     $("#cadastro").click(function () {       
         var nome2 = $("#Nome").val();
         var tag2 = $("#Tag").val();
